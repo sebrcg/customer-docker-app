@@ -1,0 +1,18 @@
+replicaCount: 3
+
+image:
+  repository: whalesnail/my-custom-app
+  pullPolicy: Always
+  tag: "latest"
+
+service:
+  type: LoadBalancer
+  port: 5000
+
+resources:
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi

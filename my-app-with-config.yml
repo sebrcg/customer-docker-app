@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: app
+        image: whalesnail/my-custom-app:latest
+        env:
+        - name: APP_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: APP_NAME
+        - name: LOG_LEVEL
+          valueFrom:
+            configMapKeyRef:
+              name: app-config
+              key: LOG_LEVEL
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-secret
+              key: root-password
+        ports:
+        - containerPort: 5000

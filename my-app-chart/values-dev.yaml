@@ -1,0 +1,20 @@
+  # Development-specific values
+  replicaCount: 1
+
+  image:
+    repository: whalesnail/my-custom-app
+    pullPolicy: IfNotPresent
+    tag: "latest"
+
+  service:
+    type: ClusterIP
+    port: 5000
+
+  resources:
+    limits:
+      cpu: 100m
+      memory: 128Mi
+    requests:
+      cpu: 50m
+      memory: 64Mi
+  EOF

@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-	return '<h1>Custom Docker App!</h1><p>Built by a DevOps Engineer 🚀</p>'
+	return '<h1>Custom Docker App v3.0!</h1><p>Multi-Environment Deployment! 🌍</p>'
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=5000)
