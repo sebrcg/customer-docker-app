@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 env:
-  DOCKER_IMAGE: sebrcg/customer-docker-app
+  DOCKER_IMAGE: whalesnail/customer-docker-app
 
 jobs:
   build-and-push:
