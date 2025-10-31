@@ -16,7 +16,7 @@ def hello():
 
 @app.route('/health')
 def health():
-    return {'status': 'healthy', 'version': 'v6.0'}
+    return 'OK'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
