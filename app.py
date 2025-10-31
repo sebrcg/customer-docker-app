@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/')
 def hello():
     version = "v6.0"
-    weclome_msg = os.getenv('WELCOME_MESSAGE', 'Welcome!')
+    welcome_msg = os.getenv('WELCOME_MESSAGE', 'Welcome!')
     return f'''
       <h1>Custom Docker App {version}</h1>
       <p>🎉 {welcome_msg}</p>
