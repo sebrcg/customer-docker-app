@@ -40,6 +40,12 @@ spec:
           {{- end }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+          - name: WELCOME_MESSAGE
+            valueFrom:
+              secretKeyRef:
+                name: app-config
+                key: WELCOME_MESSAGE
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
