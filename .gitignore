@@ -1,0 +1,45 @@
+# Secrets and Certificates (never commit real ones!)
+*.key
+*.crt
+*.pem
+*.p12
+
+# Temporary files
+temp-*
+*.tmp
+*.swp
+*~
+
+# Environment files
+.env
+.env.local
+*.local
+
+# IDE
+.vscode/
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Terraform (if added later)
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+*.egg-info/
+
+# Kubernetes
+kubeconfig
+*.kubeconfig
