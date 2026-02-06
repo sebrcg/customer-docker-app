@@ -1,5 +1,5 @@
   # Development-specific values
-  replicaCount: 1
+  replicaCount: 3
 
   image:
     repository: whalesnail/my-custom-app
@@ -17,4 +17,3 @@
     requests:
       cpu: 50m
       memory: 64Mi
-  EOF
